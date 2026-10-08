@@ -15,7 +15,7 @@ RAG_System/
 │   ├── eval/                        # 评估问题集（questions.json）
 │   ├── chroma_test/                 # 测试向量库（bge-m3，150块）
 │   └── chroma_db_bge/               # 向量库（bge-m3，1669 块）
-├── models/                          # beg-reranker-base(本地)
+├── models/                          # bge-reranker-base 
 ├── reports/                         # 评估产出（CSV）
 ├── logs/                            # 运行日志
 ├── scripts/
@@ -65,9 +65,10 @@ pip install -r requirements.txt
 
 # 3. 拉取嵌入模型（本地 Ollama）
 ollama pull bge-m3
+### Embedding（Ollama）
 
-# 4. 下载重排序模型到本地
-# 从 HuggingFace 下载 BAAI/bge-reranker-base 到 ./models/bge-reranker-base
+# 4. 下载Reranker到本地
+从 HuggingFace 下载 BAAI/bge-reranker-base 到 ./models/bge-reranker-base
 
 # 5. 设置 DeepSeek API Key
 export DEEPSEEK_API_KEY="sk-..."

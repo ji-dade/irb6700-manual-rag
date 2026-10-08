@@ -7,16 +7,15 @@
 - 不负责检索，只负责"对已有候选重新排序"
 
 说明：
-- Cross-Encoder 把 query 和 doc 拼一起输入模型，交互充分，比向量相似度准
-- 默认用 BAAI/bge-reranker-base(中英都行)
+- Cross-Encoder 把 query 和 doc 拼一起输入模型,比向量相似度准
 - 返回的 Document 保留原 metadata,并加一个 rerank_score 方便调试
 """
 
 import logging
-from typing import List, Optional, Tuple
+from typing import List, Tuple
 
 from langchain_core.documents import Document
-from src.config import TOP_K
+from src.config import RERANKER_PATH, TOP_K
 
 logger = logging.getLogger(__name__)
 
@@ -33,23 +32,17 @@ class Reranker:
 
     def __init__(
         self,
-        
-    
-        # model_name: str = "BAAI/bge-reranker-base", #下载
-        model_name: str = "./models/bge-reranker-base",   # 本地
-        #max_length: int = 512,# sentence-transformers 的写法（3.x 才有 max_length) 这里未使用
+        model_name: str = None,
     ):
         """
         Args:
             model_name: Cross-Encoder 模型名(reranker)
             max_length: 单对 (query, doc) 的最大 token 长度，超出截断
         """
-        self.model_name = model_name
-
-        # 懒加载
+        # model_name: str = "BAAI/bge-reranker-base", # 下载
+        self.model_name = str(model_name or RERANKER_PATH)
         self._model = None
-
-        logger.info(f"Reranker 初始化完成, model_name={model_name}")
+        logger.info(f"Reranker 初始化完成, model_name={self.model_name}")
 
     def rerank(
         self,

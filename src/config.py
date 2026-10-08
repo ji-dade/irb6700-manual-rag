@@ -17,9 +17,12 @@ PDF_PATH = RAW_PDF_DIR / PDF_FILENAME
 CHUNK_SIZE = 800
 CHUNK_OVERLAP = 100
 
-# 嵌入模型
-EMBEDDING_MODEL = "bge-m3"
-#nomic-embed-text
+# ---- Embedding（Ollama）----
+EMBEDDING_MODEL = "bge-m3"       
+OLLAMA_BASE_URL = "http://localhost:11434"
+
+# ---- Reranker（本地加载）----
+RERANKER_PATH = PROJECT_ROOT / "models" / "bge-reranker-base"
 
 # 检索参数
 TOP_K = 10
