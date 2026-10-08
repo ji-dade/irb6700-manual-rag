@@ -98,13 +98,13 @@ curl -X POST http://localhost:8000/ask \
 ```bash
 - 单元测试（TestClient，进程内，不启动服务）
 ```
-
 ## 结果
-方法,Recall@5,MRR
-向量,0.8824,0.8235
-BM25,0.7059,0.6275
-Hybrid,0.8824,0.7353
-Hybrid+Rerank,0.8824,0.8235
+| 方法 | Recall@(5) | MRR |
+|------|----------|-------|
+| 向量 | 0.8824 | 0.8235 |
+| BM25 | 0.7059 | 0.6275 |
+| Hybrid | 0.8824 | 0.7353 |
+| Hybrid+Rerank | 0.8824 | 0.8235 |
 
 以上结果由 `python -m scripts.evaluate --eval` 生成。
 ## 环境依赖
