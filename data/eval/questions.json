@@ -1,0 +1,122 @@
+[
+  {
+    "id": "q001",
+    "question": "检查安装的先决条件是什么",
+    "expected_pages": [40],
+    "type": "fact"
+  },
+  {
+    "id": "q002",
+    "question": "安装机器人的第 2 步是什么?",
+    "expected_pages": [61],
+    "type": "fact"
+  },
+  {
+    "id": "q003",
+    "question": "安装适用的平台，或准备好机械臂的基座",
+    "expected_pages": [61],
+    "type": "fact"
+  },
+  {
+    "id": "q004",
+    "question": "机器人中使用的材料弃置是指什么",
+    "expected_pages": [801, 802, 804],
+    "type": "fact"
+  },
+  {
+    "id": "q005",
+    "question": "更换 IRB 6700 上的零件时",
+    "expected_pages": [197],
+    "type": "fact"
+  },
+  {
+    "id": "q006",
+    "question": "校准术语",
+    "expected_pages": [769],
+    "type": "fact"
+  },
+  {
+    "id": "q007",
+    "question": "固定底板在哪一页?",
+    "expected_pages": [63, 64, 67],
+    "type": "fact"
+  },
+  {
+    "id": "q008",
+    "question": "吊装附件的零件号是什么?",
+    "expected_pages": [400, 449, 641],
+    "type": "fact"
+  },
+  {
+    "id": "q009",
+    "question": "机器人重量是多少?",
+    "expected_pages": [41],
+    "type": "fact"
+  },
+  {
+    "id": "q010",
+    "question": "手动释放制动闸怎么操作?",
+    "expected_pages": [81],
+    "type": "fact"
+  },
+  {
+    "id": "q011",
+    "question": "如何用叉车抬起机器人?",
+    "expected_pages": [69],
+    "type": "reasoning"
+  },
+  {
+    "id": "q012",
+    "question": "更换轴1齿轮箱需要注意什么?",
+    "expected_pages": [614, 575],
+    "type": "reasoning"
+  },
+  {
+    "id": "q013",
+    "question": "安装机器人前需要做哪些安全检查?",
+    "expected_pages": [40, 27, 29],
+    "type": "reasoning"
+  },
+  {
+    "id": "q014",
+    "question": "机器人的防护等级有哪些?",
+    "expected_pages": [43],
+    "type": "fact"
+  },
+  {
+    "id": "q015",
+    "question": "DressPack 电缆是什么?",
+    "expected_pages": [100, 101],
+    "type": "fact"
+  },
+  {
+    "id": "q016",
+    "question": "今天天气怎么样?",
+    "expected_pages": [],
+    "type": "refusal"
+  },
+  {
+    "id": "q017",
+    "question": "机器人的价格是多少?",
+    "expected_pages": [],
+    "type": "refusal"
+  },
+  {
+    "id": "q018",
+    "question": "如何做红烧肉?",
+    "expected_pages": [],
+    "type": "refusal"
+  },
+  {
+    "id": "q019",
+    "question": "IRB 6700 的生产厂家是谁?",
+    "expected_pages": [1, 3],
+    "type": "fact"
+  },
+  {
+    "id": "q020",
+    "question": "机器人退役时如何处理润滑脂?",
+    "expected_pages": [801, 802],
+    "type": "reasoning"
+  }
+]

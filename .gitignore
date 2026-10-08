@@ -8,12 +8,16 @@ venv/
 env/
 .pytest_cache/
 
-# 项目数据
-data/
+
+# 数据 
+data/*
+!data/raw_pdfs/
+!data/eval/
 models/
 logs/
 reports/
 notebooks/
+tests/
 
 # 系统
 .DS_Store
